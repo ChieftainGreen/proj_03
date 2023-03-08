@@ -1,16 +1,15 @@
-# This is a sample Python script.
+"""Youtube downloader"""
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# план развития:
+# 1. базовый функционал в режиме диалога - ввод url, скачивание, сохранение в файл, вывод имени
+# 2. обрезка url, проверка имени файла, может быть сообщения об ошибках
+# 3 GUI - готово сразу
+# 3.1 progress bar, сообщения о выполнении
+# 4 сборка в exe-файл
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import backend
+import gui
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+gui.run_backend = backend.get_video
+gui.run_gui()
