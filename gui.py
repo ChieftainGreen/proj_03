@@ -11,7 +11,8 @@ def main(page: ft.Page):
         run_backend(url_input.value)
         page.update()
 
-    url_input = ft.TextField(label="Video URL")
+    url_input = ft.TextField(label="Video URL", on_submit=handle_submit)
+    #
     selected_path = ft.Text()
     selected_path.value = "File Save Location"
     download_button = ft.TextButton("Download", on_click=handle_submit)
